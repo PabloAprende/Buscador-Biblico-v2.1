@@ -239,7 +239,6 @@ class Interfaz implements ActionListener, MouseMotionListener, MouseListener {
 				VentanadeCarga vc = new VentanadeCarga();				
 				vc.start();
 				
-				
 				//--------------------------------------------
 				
 				x = new Abrir_Leer_Buscar();
