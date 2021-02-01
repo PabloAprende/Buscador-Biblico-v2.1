@@ -40,12 +40,6 @@ public class VentanadeCarga extends Thread {
 		panel2.add(new JLabel("Esto puede tardar unos segundos..."));
 		
 		msnDemora.setVisible(true);
-		
-		run();
-	}
-	
-	public static void main(String[] args) {
-		new VentanadeCarga().start();
 	}
 	
 	@Override
@@ -91,8 +85,9 @@ public class VentanadeCarga extends Thread {
 	private void esperar() {
 		synchronized (this) {
 			try {
-				this.wait(350L);
-				this.notify();
+				Thread.sleep(350L);
+//				this.wait(350L);
+//				this.notify();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

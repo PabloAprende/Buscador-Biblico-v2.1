@@ -236,8 +236,9 @@ class Interfaz implements ActionListener, MouseMotionListener, MouseListener {
 				
 				//-------------------------------------------
 				
-				//VentanadeCarga vc = new VentanadeCarga();				
-				// sincronizar vc con this.
+				VentanadeCarga vc = new VentanadeCarga();				
+				vc.start();
+				
 				
 				//--------------------------------------------
 				
@@ -268,7 +269,7 @@ class Interfaz implements ActionListener, MouseMotionListener, MouseListener {
 					}
 				}
 
-				//vc.ocultarVentadadeEspera();
+				vc.ocultarVentadadeEspera();
 			} else {
 				resultados.setText(BusquedaNula.leerArchivo()); new BusquedaNula().alerta(areaBusqueda, im);
 				scroll.setBorder(BorderFactory.createTitledBorder("Esperando su búsqueda..."));
